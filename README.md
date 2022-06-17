@@ -12,7 +12,7 @@ Vertex Colors are stored in RGB(A)_888(8) format.
 
 ## Usage
 
-	GXConvert2.py [-h] [-b B] [-s S] [-e E] FILE
+	GXConvert.py [-h] [-b B] [-s S] [-e E] FILE
 	  FILE        PLY file to process
 	options:
 	  -h, --help  show this help message and exit
