@@ -101,8 +101,8 @@ def process(fileName, binPath, sourcePath, headerPath):
                 packedarr += pack(">3f", nx, ny, nz)
             
             if hasUv:
-                s = plydata["vertex"]["s"]
-                t = plydata["vertex"]["t"]
+                s = plydata["vertex"]["s"][i]
+                t = plydata["vertex"]["t"][i]
                 packedarr += pack(">2f", s, t)
             
             if hasColor:
@@ -218,7 +218,7 @@ def main():
     parser.add_argument('FILE', help='PLY file to process')    
 
     args = parser.parse_args()
-    print("PLYtoGX v1.0")
+    print("PLYtoGX v1.1")
     process(args.FILE, args.b, args.s, args.e)
 
 if __name__ == "__main__":
